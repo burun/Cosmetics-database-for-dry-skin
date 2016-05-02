@@ -1,5 +1,8 @@
 # Cosmetics-database-for-dry-skin
 
+## Purpose
+- To design a sample database to store the information of cosmetics ingredients, and their functions to dry skin (positive or negative).
+
 ## Database
 ### 10 Sample Ingredients
 - DIMETHICONE
