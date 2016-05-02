@@ -5,7 +5,7 @@ plt.style.use('ggplot')
 plt.rcParams['font.size'] = 15
 
 # Read csv file
-data = pd.read_csv('cosmetics data.csv')
+data = pd.read_csv('cosmetics.csv', encoding='ISO-8859-1')
 
 # Find ingredients positive for dry skin, and create a new column
 data['DryPositive'] = np.where(data['Emollient'] + data['Humectant'] + data['Moisturising'] >= 1, 'positive', 'negative')
