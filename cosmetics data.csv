@@ -1,0 +1,11 @@
+CosmEthicsID,InciName,ChemicalName,CasNumber,ECNumber,Emollient,Humectant,Moisturising,ReferenceEmollient,ReferenceHumectant,ReferenceMoisturising
+1,DIMETHICONE,Dimethicone,63148-62-9,,1,0,0,http://www.ncbi.nlm.nih.gov/pubmed?term=Dimethicone+Emollient,,
+2,GLYCERIN,Glycerol,56-81-5,200-289-5,0,1,0,,http://www.ncbi.nlm.nih.gov/pubmed?term=Glycerol+Humectant,
+3,SODIUM HYALURONATE,Hyaluronan Sodium,9067-32-7,,0,1,0,,http://www.ncbi.nlm.nih.gov/pubmed/?term=%22SODIUM+HYALURONATE%22+Humectant,
+4,PROPYLENE GLYCOL,Propane-12-diol,57-55-6,200-338-0,0,1,0,,http://www.ncbi.nlm.nih.gov/pubmed?term=%22PROPYLENE%20GLYCOL%22+Humectant,
+5,TREHALOSE,alpha-D-glucopyranosyl,99-20-7,202-739-6,0,1,1,,http://www.ncbi.nlm.nih.gov/pubmed?term=TREHALOSE+Humectant,http://www.ncbi.nlm.nih.gov/pubmed?term=TREHALOSE+Moisturising
+6,BENZOYL PEROXIDE,Dibenzoyl peroxide ,94-36-0,202-327-6,0,0,0,,,
+7,SALICYLIC ACID,Salicylic acid,69-72-7,200-712-3,0,0,0,,,
+8,ISOPROPYL MYRISTATE,Tetradecanoic acid,110-27-0,203-751-4,0,0,0,,,
+9,ISOPROPYL PALMITATE,Isopropyl palmitate,142-91-6,205-571-1,0,0,0,,,
+10,AMMONIUM LAURYL SULFATE,Ammonium dodecyl sulphate,2235-54-3,218-793-9,0,0,0,,,
