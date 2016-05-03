@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 plt.rcParams['font.size'] = 15
+pd.set_option('max_colwidth',40)
 
 # Read csv file
 data = pd.read_csv('cosmetics.csv', encoding='ISO-8859-1')
