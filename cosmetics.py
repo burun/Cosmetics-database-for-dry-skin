@@ -38,3 +38,6 @@ plt.bar(bar_name, sizes, align="center")
 plt.xticks(bar_name, labels)
 plt.suptitle("Different functions of ingredients to dry skin")
 plt.show()
+
+# Find ingredients property to dry skin and Eczema
+print(data.loc[:, ['ChemicalName', 'ConfusionMatrix']])
