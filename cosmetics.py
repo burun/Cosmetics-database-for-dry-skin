@@ -3,13 +3,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 plt.rcParams['font.size'] = 15
-pd.set_option('max_colwidth',40)
+pd.set_option('max_colwidth', 40)
 
 # Read csv file
 data = pd.read_csv('cosmetics.csv', encoding='ISO-8859-1')
 
 # Find ingredients positive for dry skin, and create a new column
-data['DryPositive'] = np.where(data['Emollient'] + data['Humectant'] + data['Moisturising'] >= 1, 'positive', 'negative')
+data['DryPositive'] = np.where(
+    data['Emollient'] + data['Humectant'] + data['Moisturising'] >= 1, 'positive', 'negative')
 
 # Print the whole table
 print(data)
@@ -30,9 +31,10 @@ plt.suptitle("Percentage of ingredients propertity to dry skin")
 plt.show()
 
 # Calculate functions of ingredients to dry skin
-bar_name = [1,2,3,4]
+bar_name = [1, 2, 3, 4]
 labels = ['Emollient', 'Humectant', 'Moisturising', 'Negative']
-sizes = [np.count_nonzero(data['Emollient']), np.count_nonzero(data['Humectant']), np.count_nonzero(data['Moisturising']), dry_negative]
+sizes = [np.count_nonzero(data['Emollient']), np.count_nonzero(
+    data['Humectant']), np.count_nonzero(data['Moisturising']), dry_negative]
 
 plt.bar(bar_name, sizes, align="center")
 plt.xticks(bar_name, labels)
@@ -40,4 +42,11 @@ plt.suptitle("Different functions of ingredients to dry skin")
 plt.show()
 
 # Find ingredients property to dry skin and Eczema
+# Beneficial Property + Eczema = True Positive
+# Beneficial Property + Not Eczema = False Positive
+# Harmful Property + Eczema = True Negative
+# Harmful Property + Not Eczema = False Negative
+data['ConfusionMatrix'] = np.where((data['DryPositive'] == 'positive') & (data['Eczema'] == 1), 'True Positive',
+                                    np.where((data['DryPositive'] == 'positive') & (data['Eczema'] == 0), 'False Positive',
+                                             np.where((data['DryPositive'] == 'negative') & (data['Eczema'] == 0), 'False Negative', 'True Negative')))
 print(data.loc[:, ['ChemicalName', 'ConfusionMatrix']])
